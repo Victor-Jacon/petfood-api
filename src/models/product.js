@@ -17,6 +17,6 @@ const product = new Schema({
   capa: String,
   preco: Number,
   avaliacoes: Number
-})
+});
 
-module.exports = mongoose.model('Product', petshop);
+module.exports = mongoose.model('Product', product);

@@ -4,5 +4,16 @@
         "Eu tento iniciar meu servidor, e ele diz que a porta 8000 já está em uso, o que fazer?":"Fechar todos os terminais que tiver aberto na máquina, abrir o gerenciador de processos do computador, e finalizar todos os processos que tem nome node, depois, basta yarn start, e ele vai funcionar.",
         "QUal url eu posso acessar meu servidor?":"Abre o chrome e joga a url dele. A url geralmente é localhost:portaQueVocêUsou, no nosso caso é localhost:8000",
         "Como remover o node modules do github? enviei por engano": "Passo a passo aqui: https://stackoverflow.com/questions/50675829/remove-node-modules-from-git-in-vscode"
+    },
+    "Petfood - API 2":
+    {
+        "Como instalar mongoDB no linux mint?": "https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/",
+        "Como inicializar o mongoDB":"sudo systemctl start mongod",
+        "Como verificar se o mongoDB realmente esta UP?":"sudo systemctl status mongod",
+        "Como parar o mongoDB?":"sudo systemctl stop mongod",
+        "Como reiniciar o mongoDB":"sudo systemctl restart mongod",
+        "Qual é a GUI do mongoDB?": "MongoDB compass",
+        "Como instalar o mongoDB Compass?":"wget https://downloads.mongodb.com/compass/mongodb-compass_1.26.1_amd64.deb",
+        "Como iniciar o mongoDB compass pelo terminal?":"mongodb-compass"
     }
 }
