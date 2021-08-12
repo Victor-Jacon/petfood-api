@@ -1,0 +1,8 @@
+{
+    "Petfood - API 1": 
+    {
+        "Eu tento iniciar meu servidor, e ele diz que a porta 8000 já está em uso, o que fazer?":"Fechar todos os terminais que tiver aberto na máquina, abrir o gerenciador de processos do computador, e finalizar todos os processos que tem nome node, depois, basta yarn start, e ele vai funcionar.",
+        "QUal url eu posso acessar meu servidor?":"Abre o chrome e joga a url dele. A url geralmente é localhost:portaQueVocêUsou, no nosso caso é localhost:8000",
+        "": ""
+    }
+}
