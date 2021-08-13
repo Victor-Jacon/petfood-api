@@ -15,5 +15,14 @@
         "Qual é a GUI do mongoDB?": "MongoDB compass",
         "Como instalar o mongoDB Compass?":"wget https://downloads.mongodb.com/compass/mongodb-compass_1.26.1_amd64.deb",
         "Como iniciar o mongoDB compass pelo terminal?":"mongodb-compass"
+    },
+    "Petfood - API 3":
+    {
+        "Qual o link do ambiente de testes do pagarme?":"https://beta.dashboard.sandbox.pagar.me/#/welcome",
+        "Onde vamos configurar a comissão e o depósito dos parceiros e da nossa propria comissão?":"No pagarme, ele vai fazer tudo pra nós.",
+        "Como instalar insomnia no linux mint?":"https://support.insomnia.rest/article/156-installation",
+        "Eu estou com dependencias quebradas no meu sistema linux, como corrigir?":" sudo apt-get install -f",
+        "Como startar o insomnia?":"abrindo na gui do linux mesmo.",
+        "Vou integrar uma api de terceiros no meu software, qual o primeiro passo?":"Realizar testes com insomnia + chave api de testes da api de terceiros + ler a documentação, pra ir conhecendo o que a ferramenta fez, e ir fazendo POSTS no insomnia com resultado de sucesso, pra vc entender como usar, e depois, colocar essas requisições pra serem feitas de forma dinâmica no seu software."
     }
 }

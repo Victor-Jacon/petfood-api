@@ -10,5 +10,23 @@
         "Instalei a lib cors, que permite que a gente envie requisições pelo localhost",
         "Configurei o servidor + banco de dados",
         "Escrevi o script pra iniciar minha api, este aqui: start: nodemon src/index.js"
+    ],
+    "Commit 2": [
+        ""
+    ],
+    "Commit 3": [
+        "Realizei a integração da nossa api com a api do pagarme",
+        "Copiei a requisição de exemplo da documentação do pagarme para testar no insomnia, e ver se conseguia fazer os dados aparecerem lá no meu sandbox da pagarme, assim que consegui, eu copiei esta requisição de sucesso, e salvei ela para utilizar no meu método, para tornar as requisições dinâmicas",
+        "Para realizar a integração utilizei o axios, importei o axios no projeto, e configurei o baseURL conforme a documentação",
+        "Salvei minha api key no keys.json somente para testes, num ambiente de produção usaria um arquivo .env",
+        "Criei o método createRecipient, este método serve para criar um recebedor no pagarme, que é como faremos para nossos parceiros receberem as vendas que eles fizerem no nosso marketplace",
+        "Dentro do método createRecipient eu coloquei a requisição que deu certo lá no insomnia, e os valores estáticos, como api, e name, eu já configurei para pegar de forma dinâmica.",
+        "Importei o método createRecipient para meu SCRIPT JS addPetShop, este script eu criei para popular meu mongoDB com dados de exemplo para a gente ver se ele ia puxar o recipient id direitinho. Ou seja, para testar se quando nosso backend enviasse dados, se ele realmente ia criar um recipient id para ele, e também, para eu ter dados de MOCK para eu ir usando no desenvolvimento.",
+        "Criei o petshop.json com dados de mentira para eu poder testar no desenvolvimento ",
+        "Criei o SCRIPT JS AddPetshop, este script vai percorrer o petshop.json que eu criei, para adicionar um a um no mongoDB",
+        "Pra cada registro do petshop.json, ele vai criar uma variavel newPetshop, que é o petshop que está sendo adicionado, e ele vai ser do tipo Petshop, que é o model que criamos anteriormente. Esse model vai receber como parâmetro o próprio petshop que está sendo iterado, o registro que está sendo iterado daquela vez.",
+        "O script vai salvar isso no mongoDB, e depois executar outra operação que vai inserir vários produtos de uma vez só, ele vai entrar no objeto petshop.produtos, e vai executar uma repetição pra cada produto, nomeando ele como p, nessa repetição, ele vai salvar tudo que tiver no p, e no petshop_id, ele vai salvar o id que tiver sido passado no newPetshop._id. Isso faz com que a gente consiga fazer um relacionamento pra saber qual é o vendedor que está anunciando aquele produto. o id do petshop que vai estar no campo do produto, vai ser a maneira da gente identificar que petshop é o dono daquele produto. ",
+        "crio uma variável recipient que tb será async, e vai aguardar a função createRecipients ser executada (recebendo o nome do petshop como parâmetro)",
+        "Eu crio uma verificação para ver se a requisição foi feita com sucesso, se não existir recipient.error, ou seja, se der certo, execute a função a seguir."
     ]
 }
