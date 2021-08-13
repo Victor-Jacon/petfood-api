@@ -24,5 +24,10 @@
         "Eu estou com dependencias quebradas no meu sistema linux, como corrigir?":" sudo apt-get install -f",
         "Como startar o insomnia?":"abrindo na gui do linux mesmo.",
         "Vou integrar uma api de terceiros no meu software, qual o primeiro passo?":"Realizar testes com insomnia + chave api de testes da api de terceiros + ler a documentação, pra ir conhecendo o que a ferramenta fez, e ir fazendo POSTS no insomnia com resultado de sucesso, pra vc entender como usar, e depois, colocar essas requisições pra serem feitas de forma dinâmica no seu software."
+    },
+    "Petfood - API 4":
+    {
+        "Quando eu copio um json da internet e colo no insomnia ele fica todo feio, como auto formatar o json do insomnia?":"Clica em beautify JSON, que fica na parte inferior da UI do insomnia.",
+        "":""
     }
 }

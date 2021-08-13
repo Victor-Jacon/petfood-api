@@ -28,5 +28,13 @@
         "O script vai salvar isso no mongoDB, e depois executar outra operação que vai inserir vários produtos de uma vez só, ele vai entrar no objeto petshop.produtos, e vai executar uma repetição pra cada produto, nomeando ele como p, nessa repetição, ele vai salvar tudo que tiver no p, e no petshop_id, ele vai salvar o id que tiver sido passado no newPetshop._id. Isso faz com que a gente consiga fazer um relacionamento pra saber qual é o vendedor que está anunciando aquele produto. o id do petshop que vai estar no campo do produto, vai ser a maneira da gente identificar que petshop é o dono daquele produto. ",
         "crio uma variável recipient que tb será async, e vai aguardar a função createRecipients ser executada (recebendo o nome do petshop como parâmetro)",
         "Eu crio uma verificação para ver se a requisição foi feita com sucesso, se não existir recipient.error, ou seja, se der certo, execute a função a seguir."
+    ],
+    "Commit 4":
+    [
+        "Li a documentação de split de pagamento do pagarme:https://docs.pagar.me/docs/split-rules ",
+        "Testei no insomnia o codigo cURL que tem na documentação",
+        "Depois que consegui dar um status 200 de sucesso, ai eu comecei a escrever o método da api para integrar com o split de pgto",
+        "Criei o método createSplitTransaction, que vai ser async, por enquanto ele não recebe nada, e ele realiza um post na url /transactions, conforme explicado na documentação do pagarme, e envia para este path a api key + tudo que tiver no data.",
+        "Criei o tratamento de fluxo para o try e o catch, pra caso dê certo e caso dê errado, e configurei o que vai retornar em cada caso. No nosso caso de split de sucesso, vai retornar tudo que o pagarme responder pra nós, e dizer que não houve erro, e no caso do catch, vai mostrar a msg de erro que deu, e dizer que ocorreu um erro."
     ]
 }

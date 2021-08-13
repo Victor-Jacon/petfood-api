@@ -76,6 +76,25 @@ module.exports = {
     } catch (err) {
       return { error: true, message: err.message };
     }
+  },
+  /* SPLIT 1 - 
+  1º - Copiamos e testamos no insomnia o cURL da documentação do pagarme:https://docs.pagar.me/docs/split-rules
+  2º - configuramos a rota certa conforme a documentação, que é /transactions
+  3º - Nós vamos "postar" para a rota /transactions, nossa api_key + tudo que vier de data.
+  4º - E depois, configuramos o return dentro do try (quando dá certo) que vai retornar para nós os dados de resposta que a api do pagarme responder pra gente, e vai dizer que não deu erro, afinal, se o try deu certo, significa que deu status code 200.
+  5º - Dentro do catch, colocamos o que retornar caso dê erro, neste caso vai retornar a mensagem de erro, e dizer que ocorreu um erro.
+  */
+  createSplitTransaction: async () => {
+    try {
+      const response = await api.post('/transactions', {
+        api_key,
+        ...data
+      });
+
+      return { error:false, data:response.data }
+    } catch (err) {
+      return { error: true, message: err.message }
+    }
   }
 }
 
