@@ -36,5 +36,14 @@
         "Depois que consegui dar um status 200 de sucesso, ai eu comecei a escrever o método da api para integrar com o split de pgto",
         "Criei o método createSplitTransaction, que vai ser async, por enquanto ele não recebe nada, e ele realiza um post na url /transactions, conforme explicado na documentação do pagarme, e envia para este path a api key + tudo que tiver no data.",
         "Criei o tratamento de fluxo para o try e o catch, pra caso dê certo e caso dê errado, e configurei o que vai retornar em cada caso. No nosso caso de split de sucesso, vai retornar tudo que o pagarme responder pra nós, e dizer que não houve erro, e no caso do catch, vai mostrar a msg de erro que deu, e dizer que ocorreu um erro."
+    ],
+    "Commit 5":
+    [
+        "Realizei a restrição da minha api para evitar uso indevido"
+    ],
+    "Commit 6": 
+    [
+        "Implementação - DOTENV para proteger as chaves api do pagarme e do google maps",
+        "Link do dotenv - https://www.npmjs.com/package/dotenv"
     ]
 }

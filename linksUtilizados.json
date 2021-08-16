@@ -29,5 +29,9 @@
     {
         "Quando eu copio um json da internet e colo no insomnia ele fica todo feio, como auto formatar o json do insomnia?":"Clica em beautify JSON, que fica na parte inferior da UI do insomnia.",
         "Eu quero testar minha rota de purchase pra ver se a compra realizada no meu app realmente está sendo enviada ao pagarme, como eu posso fazer isso?":"Neste caso é um post, e não um get. Então a gente ao invés de usar a url do pagarme, a gente vai colocar localhost:portaDoServer/nomeDaRota, no caso deste projeto ficou localhost:8000/purchase, e o body desta requisição vai ser a transação que queremos testar, ai coloca um nome de um cliente x, e etc. Pode até colocar umbreakpoint pra gente ver o que tem dentro da variável, e depois copiar o código que tiver dentro dela, e colar no insomnia. "
+    },
+    "Petfood - API 5":
+    {
+        "Como eu faço para armazenar minhas api keys com segurança?":"https://www.youtube.com/watch?v=KOYQDxaL9ag"
     }
 }

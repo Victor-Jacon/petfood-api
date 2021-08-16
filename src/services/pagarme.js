@@ -1,3 +1,14 @@
+/* .ENV 1 - 
+yarn add dotenv - Instalei o .env para controlar a segurança das minhas chaves api
+!!!! Quando for dar deploy a gente não vai usar mais o .env, pq essas chaves api vão ficar no ambiente da hospedagem, no ambiente da vercel/amazon etc. !!!
+Com o require, eu importo o dotenv pra eu poder acessar os dados do arquivo .env
+!!! A gente adiciona um bloco de checagem, só pra ver se ele está em produção, isso garante que a gente não suba as chaves secretas para produção sem querer. !!! 
+Neste projeto não deu pra usar .env, não consegui fazer funcionar, ai apelei para o .json e excluindo ele do git
+*/ 
+if (process.env.NODE_ENV !== 'production') {
+  require('dotenv').config()
+}
+
 /* API PAGAR ME - 1
 Criar a pasta services + arquivo pagarme.js
 Instalar o axios - yarn add axios (dá pra fazer requisições de um backend/api para outro backend/api)
@@ -22,7 +33,7 @@ O ideal é usar um arquivo .env, que é o jeito seguro de salvar chaves apis, fi
 /* API PAGAR ME 4
 Importamos a api key criada em keys.json, que é a chave api de teste do nosso ambiente sandbox do pagarme
 */
-const api_key = require('../data/keys.json').api_key;
+const api_key = require('../keys.json').api_key;
 
 /* API PAGAR ME 5
 Criamos um método para nosso backend, e este cara aqui que vai fazer o processo de requisição ficar dinâmico.
