@@ -19,11 +19,18 @@ Usando o método get do router do express, quando o usuário tentar acessar a ho
 Esta função async vai tentar executar o bloco a seguir, se tudo correr bem, vai dizer que o erro foi falso, e mostrar hello world.
 Se der erro e cair um erro no catch, ele vai dizer que deu erro, e mostrar a mensagem do erro.
 */
+router.get('/', async (req, res) => {
+    try {
+        res.json({error:false, message: 'Hello World'})
+    } catch (err) {
+        res.json({ error:true, message: err.message })
+    }
+})
+
 router.get('/petshops', async (req, res) => {
     try {
-        /* ROTA PETSHOPS 2 - Usando o método find do mongoose retorne todos os petshops do banco de dados */
-        const petshops = await Petshop.find();
-        res.json({error:false, message: 'Hello World'})
+        const petshops = await Petshop.find();  /* ROTA PETSHOPS 2 - Usando o método find do mongoose retorne todos os petshops do banco de dados */
+        res.json({error:false, petshops })
     } catch (err) {
         res.json({ error:true, message: err.message })
     }

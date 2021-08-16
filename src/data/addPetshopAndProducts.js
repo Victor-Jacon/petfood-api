@@ -12,7 +12,6 @@ const petshops = require('./petfood.json') /* Migrations 2 A ideia é percorrer 
 No final da linha eu coloquei .createRecipient, pq eu quero exportar a função create recipient que está dentro do arquivo pagarme.js */
 const createRecipients = require('../services/pagarme').createRecipient;
 
-
 require('../database')
 
 

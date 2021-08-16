@@ -13,7 +13,7 @@ const petshop = new Schema({
   destaque: Number,
   location: Object,
   recipient_id: String /* É o id do recebedor, do nosso parceiro, que usaremos no split de pgto para que o pagarme saiba para quem eles tem que depositar o dinheiro. */
-})
+});
 
 /* 
 O location é objeto que usaremos no nosso marker pra latitude e longitude, pra marcar no mapa onde fica o petshop do nosso parceiro.
