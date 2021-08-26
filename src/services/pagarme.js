@@ -95,7 +95,7 @@ module.exports = {
   4º - E depois, configuramos o return dentro do try (quando dá certo) que vai retornar para nós os dados de resposta que a api do pagarme responder pra gente, e vai dizer que não deu erro, afinal, se o try deu certo, significa que deu status code 200.
   5º - Dentro do catch, colocamos o que retornar caso dê erro, neste caso vai retornar a mensagem de erro, e dizer que ocorreu um erro.
   */
-  createSplitTransaction: async () => {
+  createSplitTransaction: async (data) => {
     try {
       const response = await api.post('/transactions', {
         api_key,

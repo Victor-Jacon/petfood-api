@@ -47,7 +47,16 @@ router.get('/petshop/:id', async (req, res) => {
          */
         let products = await Product.find({
             petshop_id: petshop._id
-        });
+            /* SPLIT RULES 4 - Uso o método populate que vai copiar o recipient_id, e vai adicionar dentro da chave petshop_id. Exemplo, antes o objeto petshop_id ficava assim: petshop id: aushduasdgasyd, e na linha de baixo já vinha outro objeto. Agora fica assim:
+            "petshop_id": {
+                "_id": "6119fcd7a08d00c075bde391",
+                "recipient_id": "re_ckse7yh220cvr0i9twyg2nbyt"
+            },
+            O id que estava escrito na frente do petshop id, é colocado num campo id na linha de baixo + o recipient id é copiado e colado dentro da mesma chave (pra cada produto)
+            Desta forma cada produto é possível de se saber quem vai receber o valor por aquela venda.
+            */
+        }).populate('petshop_id', 'recipient_id');
+
         res.json({error:false, petshop: {...petshop._doc, products }})
     } catch (err) {
         res.json({ error:true, message: err.message })
